@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+</head>
+<body>
+   <div id="nmenu">
+   	   <a href="#section1">Addition</a>
+   	   <a href="#section2">factorial</a>
+   	   <a href="#section3">fibonacci</a>
+   	   <a href="#section4">Palindrome</a>
+   	   <a href="#section5">Form validation</a>
+   </div>
+   <div id="section1">
+   	<form onsubmit="return add()">
+   		a: <input type="number" id="no1" required><br>
+   		b: <input type="number" id="no2" required><br>
+   		<input type="submit">
+   		<p id="add">  </p>
+   	</form>	
+   	</div>
+   	 <div id="section2">
+   	<form onsubmit="return fact()">
+   		enter a value: <input type="number" id="f" required><br>
+   		
+   		<input type="submit" value="find factorial">
+   		<p id="fact">  </p>
+   	</form>	
+   	</div>
+   	
+   	
+
+   <script>
+   		 function add(){
+   		 	var a=document.getElementById('no1').value;
+   		 	a=parseInt(a);
+   		 	var b=document.getElementById('no2').value;
+   		 	b=parseInt(b);
+   		 	var res=document.getElementById('add');
+   		 	var c=a+b;
+   		 	res.innerHTML=c;
+   		 	return false;
+   		 }
+   		 function fact(){
+            var f=document.getElementById('f').value;
+            f=parseInt(f);
+            var res=document.getElementById('fact');
+            var fact=1;
+            for(var i=f;i>1;i--){
+            	fact=fact*i
+            }
+            res.innerHTML=fact;
+            return false;
+   		 }
+   	</script>
+</body>
+</html>
